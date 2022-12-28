@@ -288,3 +288,23 @@ h3 {
 .overview__card:nth-child(8) p:nth-child(4)::before {
   content: url(/src/images/icon-down.svg);
 }
+.gitcode{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: scale 0.5s;
+}
+.gitcode img{
+  background: var(--Toggle);
+  border-radius: 50%;
+}
+.gitcode:hover{
+  scale: 1.2;
+}
+a{
+  text-decoration: none;
+  color: var(--liVeryDarkBlue);
+}
