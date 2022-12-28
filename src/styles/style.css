@@ -38,7 +38,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   max-width: 1050px;
-  height: 100vh;
 }
 .container {
   grid-column: 1/-1;
@@ -93,6 +92,7 @@ hr {
   border-radius: 1rem;
   overflow: hidden;
   padding: 1rem 0;
+  gap: 1rem;
 }
 
 .social__card::before {
