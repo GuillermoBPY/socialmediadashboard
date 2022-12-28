@@ -24,6 +24,23 @@
   /* (Text) */
   --liVeryDarkBlue: hsl(230, 17%, 14%);
   /* (Text) */
+  --Toggle: hsl(230, 22%, 74%);
+}
+
+.darkmode {
+  --liWhite: hsl(230, 17%, 14%);
+  /* (BG) */
+  --liVeryPaleBlue: hsl(232, 19%, 15%);
+  /* (Top BG Pattern) */
+  --liLightGrayishBlue: hsl(228, 28%, 20%);
+  /* (Card BG) */
+  --liDarkGrayishBlue: hsl(228, 34%, 66%);
+  /* (Text) */
+  --liVeryDarkBlue: hsl(0, 0%, 100%);
+  /* (Text) */
+  --Toggle: linear-gradient(90deg, rgba(55,143,230,1) 0%, rgba(62,218,130,1) 50%);
+
+
 }
 
 * {
@@ -31,6 +48,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 body {
@@ -38,6 +56,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   max-width: 1050px;
+  background-color: var(--liWhite);
 }
 .container {
   grid-column: 1/-1;
@@ -54,8 +73,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
-  
 }
 hr {
   border: 0;
@@ -70,10 +87,31 @@ hr {
 }
 .db__header h2 {
   margin-bottom: 0.2rem;
+  color: var(--liVeryDarkBlue);
 }
 .switch {
   display: flex;
   justify-content: space-between;
+}
+.toggle__bar{
+  position: relative;
+  background: var(--Toggle);
+  height: 20px;
+  width: 45px;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.toggle__ball--light{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--liVeryDarkBlue);
+  transition: transform 0.5s;
+}
+
+.toggle__ball--dark{
+  transform: translateX(25px);
 }
 
 .db__socialfollow {
